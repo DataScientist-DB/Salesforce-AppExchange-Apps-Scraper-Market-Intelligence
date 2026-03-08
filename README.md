@@ -1,5 +1,10 @@
 <<<<<<< HEAD
 🚀 Salesforce AppExchange Apps Scraper & Market Intelligence 
+## Apify Actor
+
+This project powers the Apify Store Actor:
+
+https://apify.com/adinfosys-labs/salesforce-appexchange-apps-scraper-market-intelligence
 
 Extract Salesforce AppExchange apps, categories, ratings, and ecosystem insights.
 Discover, Analyze, and Export Salesforce AppExchange Apps
