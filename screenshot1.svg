@@ -1,0 +1,13 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#0b74de"/>
+  <text x="100" y="180" font-size="80" fill="white" font-family="Arial" font-weight="bold">
+    Salesforce AppExchange Discovery Engine
+  </text>
+  <text x="100" y="260" font-size="48" fill="white">Extract Apps + Reviews with Full Metadata</text>
+
+  <text x="120" y="380" font-size="40" fill="white">• Apps extraction from presets</text>
+  <text x="120" y="440" font-size="40" fill="white">• Deep review extraction with scrolling</text>
+  <text x="120" y="500" font-size="40" fill="white">• CSV / XLSX / JSON output</text>
+  <text x="120" y="560" font-size="40" fill="white">• Ideal for consultants & analysts</text>
+</svg>
+

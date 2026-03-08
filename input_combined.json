@@ -1,0 +1,14 @@
+{
+  "mode": "apps+reviews",
+  "categoryPreset": "finance",
+  "maxPages": 1,
+  "maxReviewsPerApp": 20,
+  "maxReviewScrolls": 10,
+  "reviewsMode": "all",
+  "startIndex": 1,
+  "endIndex": 5,
+  "headless": true,
+  "proxySettings": {
+    "useApifyProxy": false
+  }
+}

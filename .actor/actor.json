@@ -1,0 +1,16 @@
+{
+  "actorSpecification": 1,
+  "name": "salesforce-appexchange-engine",
+  "version": "1.1",
+  "buildTag": "latest",
+
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+
+  "input": "./INPUT_SCHEMA.json",
+  "output": "./output_schema.json",
+
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
+}

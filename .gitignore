@@ -1,0 +1,22 @@
+# local dev / caches
+.venv/
+node_modules/
+storage/
+apify_storage/
+apify_storage_old_space/
+__pycache__/
+.DS_Store
+.idea/
+*.pyc
+
+# generated outputs
+*.csv
+*.xlsx
+REVIEWS_APPS/
+debug_reviews_payloads/
+screenshots/
+
+# Added by Apify CLI
+/Users/macbookpro/salesforce_appexchange_engine/apify_storage
+node_modules
+.venv

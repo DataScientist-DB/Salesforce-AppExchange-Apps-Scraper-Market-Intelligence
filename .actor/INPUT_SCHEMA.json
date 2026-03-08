@@ -1,0 +1,162 @@
+{
+  "title": "Salesforce AppExchange Intelligence Engine — Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "description": "Minimal taxonomy + minimal output columns.\n\nHow it works:\n- categoryGroup selects the Explore section: business-needs / industries / products\n- categoryPreset is the label(s) you want to run (Actor resolves real crawl targets from taxonomy.json)\n- appGroup is optional override: if provided, it will crawl exactly these Explore filter values.\n\nDemo (Business Needs): {\"mode\":\"apps\",\"categoryGroup\":\"business-needs\",\"sphere\":\"business-needs\",\"categoryPreset\":[\"sales\"],\"maxPages\":2,\"headless\":true}\nDemo (Industries): {\"mode\":\"apps\",\"categoryGroup\":\"industries\",\"sphere\":\"industries\",\"categoryPreset\":[\"automotive\"],\"maxPages\":2,\"headless\":true}\nDemo (Products): {\"mode\":\"apps\",\"categoryGroup\":\"products\",\"sphere\":\"products\",\"categoryPreset\":[\"b2b-commerce\"],\"maxPages\":2,\"headless\":true}",
+  "properties": {
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "description": "Choose what to run.",
+      "default": "apps",
+      "enum": ["apps", "reviews", "apps+reviews"],
+      "editor": "select"
+    },
+    "categoryGroup": {
+      "title": "Category Group",
+      "type": "string",
+      "description": "Top-level AppExchange group.",
+      "default": "business-needs",
+      "enum": ["business-needs", "industries", "products"],
+      "editor": "select"
+    },
+    "sphere": {
+      "title": "Sphere (label)",
+      "type": "string",
+      "description": "Label stored in output for grouping. If empty, Actor will default it to categoryGroup.",
+      "default": "",
+      "editor": "textfield"
+    },
+    "categoryPreset": {
+      "title": "Category preset (label)",
+      "type": "array",
+      "description": "Preset labels to run. The Actor resolves crawl targets from taxonomy.json (recommended). Example: [\"sales\"] or [\"automotive\"] or [\"b2b-commerce\"].",
+      "items": { "type": "string" },
+      "default": [],
+      "editor": "stringList"
+    },
+    "appGroup": {
+      "title": "App group(s) to crawl (optional override)",
+      "type": "array",
+      "description": "Optional override. If provided, the Actor crawls exactly these Explore filter values.\nExamples: business-needs → [\"contract management\"]; industries → [\"agriculture & mining\"]; products → [\"B2B Commerce\"].",
+      "items": { "type": "string" },
+      "default": [],
+      "editor": "stringList"
+    },
+    "maxPages": {
+      "title": "Max scroll passes per app group",
+      "type": "integer",
+      "description": "How many scroll/scan passes to perform when collecting listing links.",
+      "default": 2,
+      "minimum": 1,
+      "maximum": 200,
+      "editor": "number"
+    },
+    "pricingFilter": {
+      "title": "Pricing filter (optional)",
+      "type": "string",
+      "description": "Optional. Filter by inferred price bucket. Empty disables filtering.",
+      "default": "",
+      "enum": ["", "free", "freemium", "paid", "unknown"],
+      "editor": "select"
+    },
+    "minRating": {
+      "title": "Minimum rating (optional)",
+      "type": "number",
+      "description": "Filter out apps below this rating. 0 disables rating filter.",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 5,
+      "editor": "number"
+    },
+    "headless": {
+      "title": "Headless browser",
+      "type": "boolean",
+      "description": "Run browser headless (recommended true on Apify). For debugging, set false.",
+      "default": true,
+      "editor": "checkbox"
+    },
+    "proxySettings": {
+      "title": "Proxy configuration",
+      "type": "object",
+      "description": "Apify proxy settings (recommended for AppExchange reliability).",
+      "default": {},
+      "editor": "proxy"
+    },
+    "analysisOptions": {
+      "title": "Market intelligence outputs",
+      "type": "object",
+      "description": "Control MARKET_INTELLIGENCE.json, EXECUTIVE_SUMMARY.txt and MARKET_REPORT.pdf creation.",
+      "editor": "json",
+      "default": {
+        "enableCompetitiveAnalysis": true,
+        "enableCustomerAnalysis": true,
+        "enableMarketTrends": true,
+        "enableExecutiveSummary": true,
+        "enableSWOT": true,
+        "outputJsonReport": true,
+        "outputPdfReport": true,
+        "reportKvKeyPrefix": ""
+      },
+      "properties": {
+        "enableCompetitiveAnalysis": {
+          "title": "Competitive analysis",
+          "type": "boolean",
+          "description": "Include competitive analysis section in MARKET_INTELLIGENCE.json.",
+          "default": true,
+          "editor": "checkbox"
+        },
+        "enableCustomerAnalysis": {
+          "title": "Customer analysis",
+          "type": "boolean",
+          "description": "Include customer signals analysis section in MARKET_INTELLIGENCE.json.",
+          "default": true,
+          "editor": "checkbox"
+        },
+        "enableMarketTrends": {
+          "title": "Market trends",
+          "type": "boolean",
+          "description": "Include market trends section in MARKET_INTELLIGENCE.json.",
+          "default": true,
+          "editor": "checkbox"
+        },
+        "enableExecutiveSummary": {
+          "title": "Executive summary",
+          "type": "boolean",
+          "description": "Generate EXECUTIVE_SUMMARY.txt based on the market intelligence output.",
+          "default": true,
+          "editor": "checkbox"
+        },
+        "enableSWOT": {
+          "title": "SWOT",
+          "type": "boolean",
+          "description": "Include SWOT-style signals in MARKET_INTELLIGENCE.json.",
+          "default": true,
+          "editor": "checkbox"
+        },
+        "outputJsonReport": {
+          "title": "Write JSON report",
+          "type": "boolean",
+          "description": "If enabled, save MARKET_INTELLIGENCE.json to the Key-Value store.",
+          "default": true,
+          "editor": "checkbox"
+        },
+        "outputPdfReport": {
+          "title": "Write PDF report",
+          "type": "boolean",
+          "description": "If enabled, save MARKET_REPORT.pdf to the Key-Value store.",
+          "default": true,
+          "editor": "checkbox"
+        },
+        "reportKvKeyPrefix": {
+          "title": "KV key prefix (optional)",
+          "type": "string",
+          "description": "Optional prefix for KV output keys (e.g. 'ERP_' → ERP_MARKET_REPORT.pdf).",
+          "default": "",
+          "editor": "textfield"
+        }
+      }
+    }
+  },
+  "required": ["mode", "categoryGroup", "categoryPreset"]
+}

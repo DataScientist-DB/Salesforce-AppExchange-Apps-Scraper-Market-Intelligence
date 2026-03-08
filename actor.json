@@ -1,0 +1,37 @@
+{
+  "title": "Salesforce AppExchange Discovery Engine",
+  "description": "The Salesforce AppExchange Discovery Engine is an advanced scraper for extracting marketplace intelligence from Salesforce AppExchange. It supports app discovery by categories, custom URL sets, and deep review extraction with pagination and duplicate handling. Produces structured CSV/XLSX datasets suitable for analytics, BI tools, CRM workflows, vendor comparisons, and competitive studies. Designed for analysts, Salesforce consultants, integration partners, and researchers who need reliable, repeatable, and scalable AppExchange data pipelines.",
+  "descriptionShort": "Extract Salesforce AppExchange apps and reviews with full metadata. Supports presets, custom URLs, per-app review export, CSV/XLSX outputs, and dataset chaining. Ideal for consultants, analysts, and CRM market research.",
+  "version": "1.0.0",
+  "meta": {
+    "templateId": "python-playwright",
+    "actorType": "scraper"
+  },
+  "tags": [
+    "salesforce",
+    "appexchange",
+    "crm",
+    "reviews",
+    "apps",
+    "marketplace",
+    "research",
+    "analytics"
+  ],
+  "categories": [
+    "Web scraping",
+    "Business",
+    "Research & Analysis",
+    "E-commerce"
+  ],
+  "input": {
+    "mode": "apps",
+    "categoryPreset": "finance",
+    "startIndex": 0,
+    "endIndex": -1,
+    "maxReviewsPerApp": 0,
+    "maxReviewScrolls": 10,
+    "reviewsSource": "fromCategoryPages",
+    "appsDatasetId": "",
+    "headless": true
+  }
+}

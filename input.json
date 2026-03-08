@@ -1,0 +1,18 @@
+{
+  "mode": "apps",
+  "categoryGroup": "business_needs",
+  "sphere": "enterprise resource planning",
+  "appTypes": ["human resources"],
+  "maxPages": 2,
+  "headless": true,
+  "analysisOptions": {
+    "enableCompetitiveAnalysis": true,
+    "enableCustomerAnalysis": true,
+    "enableMarketTrends": true,
+    "enableExecutiveSummary": true,
+    "enableSWOT": true,
+    "outputJsonReport": true,
+    "outputPdfReport": true,
+    "reportKvKeyPrefix": "ERP_HR_"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "actorSpecification": 1,
+  "title": "Salesforce AppExchange Intelligence Engine — APPS dataset",
+  "description": "Apps discovered from Salesforce AppExchange plus enrichment fields used for market intelligence outputs.",
+  "fields": {
+    "listing_id": {
+      "type": "string",
+      "title": "Listing ID",
+      "description": "Salesforce AppExchange listingId from the URL query string."
+    },
+    "categoryGroup": { "type": "string", "title": "Category Group" },
+    "sphere": { "type": "string", "title": "Sphere" },
+    "categoryPreset": { "type": "string", "title": "Category Preset" },
+    "appGroup": { "type": "string", "title": "App Group" },
+    "app_name": { "type": "string", "title": "App Name" },
+    "name": { "type": "string", "title": "Name (compat)" },
+    "app_url": { "type": "string", "title": "App URL" },
+    "short_description": { "type": "string", "title": "Short Description" },
+    "pricing_model": {
+      "type": "string",
+      "title": "Pricing Model",
+      "description": "Derived from price text (free, freemium, paid, nonprofit-discount, unknown)."
+    },
+    "price": { "type": "string", "title": "Price Text" },
+    "rating": { "type": "number", "title": "Rating" },
+    "rating_bucket": { "type": "string", "title": "Rating Bucket" },
+    "reviews": { "type": "integer", "title": "Reviews" },
+    "reviews_bucket": { "type": "string", "title": "Reviews Bucket" },
+    "market_segment": { "type": "string", "title": "Market Segment" },
+    "last_seen": { "type": "string", "title": "Last Seen (UTC ISO)" },
+    "last_seen_at": { "type": "string", "title": "Last Seen At (compat)" },
+    "category_preset": { "type": "string", "title": "Category Preset (compat)" }
+  },
+  "views": {
+    "apps_table": {
+      "title": "Apps",
+      "description": "Primary APPS table view",
+      "transformation": {
+        "fields": [
+          "app_name",
+          "app_url",
+          "rating",
+          "reviews",
+          "pricing_model",
+          "price",
+          "market_segment",
+          "categoryGroup",
+          "sphere",
+          "categoryPreset",
+          "appGroup",
+          "short_description",
+          "listing_id",
+          "last_seen"
+        ]
+      },
+      "display": {
+        "component": "table"
+      }
+    }
+  }
+}

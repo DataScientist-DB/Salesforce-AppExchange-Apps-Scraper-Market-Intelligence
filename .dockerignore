@@ -1,0 +1,13 @@
+.venv
+node_modules
+storage
+apify_storage
+apify_storage_old_space
+__pycache__
+.idea
+.DS_Store
+*.csv
+*.xlsx
+REVIEWS_APPS
+debug_reviews_payloads
+screenshots

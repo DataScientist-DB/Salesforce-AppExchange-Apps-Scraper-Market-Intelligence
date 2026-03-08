@@ -1,0 +1,22 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f3f6fa"/>
+
+  <text x="100" y="150" font-size="70" font-family="Arial" font-weight="bold" fill="#333">
+    Three Workflow Modes
+  </text>
+
+  <!-- Mode 1 -->
+  <rect x="100" y="250" width="500" height="250" fill="white" stroke="#0b74de" stroke-width="5"/>
+  <text x="140" y="330" font-size="50" fill="#0b74de">Apps Mode</text>
+  <text x="140" y="390" font-size="36" fill="#555">Category → Apps Dataset</text>
+
+  <!-- Mode 2 -->
+  <rect x="700" y="250" width="500" height="250" fill="white" stroke="#0b74de" stroke-width="5"/>
+  <text x="740" y="330" font-size="50" fill="#0b74de">Reviews Mode</text>
+  <text x="740" y="390" font-size="36" fill="#555">Category → Apps → Reviews</text>
+
+  <!-- Mode 3 -->
+  <rect x="1300" y="250" width="500" height="250" fill="white" stroke="#0b74de" stroke-width="5"/>
+  <text x="1340" y="330" font-size="50" fill="#0b74de">Dataset Reviews</text>
+  <text x="1340" y="390" font-size="36" fill="#555">Apps Dataset → Reviews</text>
+</svg>

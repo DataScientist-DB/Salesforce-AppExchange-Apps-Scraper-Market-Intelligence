@@ -1,0 +1,60 @@
+{
+  "categoryGroups": [
+    {
+      "id": "business-needs",
+      "title": "Business Needs",
+      "spheres": [
+        {
+          "id": "business-needs",
+          "title": "Business Needs",
+          "appTypes": [
+            {
+              "id": "sales",
+              "title": "Sales",
+              "categories": ["sales"]
+            },
+            {
+              "id": "marketing",
+              "title": "Marketing",
+              "categories": ["marketing"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "industries",
+      "title": "Industries",
+      "spheres": [
+        {
+          "id": "industries",
+          "title": "Industries",
+          "appTypes": [
+            {
+              "id": "automotive",
+              "title": "Automotive",
+              "categories": ["automotive"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "products",
+      "title": "Products",
+      "spheres": [
+        {
+          "id": "products",
+          "title": "Products",
+          "appTypes": [
+            {
+              "id": "b2b-commerce",
+              "title": "B2B Commerce",
+              "categories": ["b2b commerce"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

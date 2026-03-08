@@ -1,0 +1,6 @@
+{
+  "mode": "reviewsFromAppsDataset",
+  "appsDatasetId": "your-dataset-id",
+  "maxReviewScrolls": 12,
+  "maxReviewsPerApp": 0
+}

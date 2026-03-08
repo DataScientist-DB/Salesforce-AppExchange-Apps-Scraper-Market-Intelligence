@@ -1,0 +1,6 @@
+{
+  "mode": "reviewsFromCategory",
+  "categoryPreset": "finance",
+  "maxReviewScrolls": 10,
+  "maxReviewsPerApp": 50
+}

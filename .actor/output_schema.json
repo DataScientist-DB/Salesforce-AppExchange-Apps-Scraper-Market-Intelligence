@@ -1,0 +1,55 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Salesforce AppExchange Apps Scraper & Market Intelligence Dataset",
+  "description": "Structured app dataset plus market intelligence reports exported to the default dataset and default key-value store.",
+  "properties": {
+    "dataset_items": {
+      "type": "string",
+      "title": "Apps dataset items",
+      "description": "Structured Salesforce AppExchange app records stored in the default dataset.",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    },
+    "kv_store_keys": {
+      "type": "string",
+      "title": "Output files in default key-value store",
+      "description": "List of generated CSV, XLSX, JSON, TXT, and PDF outputs.",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/keys"
+    },
+    "apps_csv": {
+      "type": "string",
+      "title": "APPS.csv",
+      "description": "Flat CSV export of discovered and enriched Salesforce AppExchange apps.",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/APPS.csv"
+    },
+    "apps_xlsx": {
+      "type": "string",
+      "title": "APPS.xlsx",
+      "description": "Excel export of discovered and enriched Salesforce AppExchange apps.",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/APPS.xlsx"
+    },
+    "market_intelligence_json": {
+      "type": "string",
+      "title": "MARKET_INTELLIGENCE.json",
+      "description": "Structured market intelligence analysis including overview, competition, pricing, opportunities, and recommendations.",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/MARKET_INTELLIGENCE.json"
+    },
+    "executive_summary_txt": {
+      "type": "string",
+      "title": "EXECUTIVE_SUMMARY.txt",
+      "description": "Readable executive summary of the analyzed AppExchange market slice.",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/EXECUTIVE_SUMMARY.txt"
+    },
+    "llm_market_summary_json": {
+      "type": "string",
+      "title": "LLM_MARKET_SUMMARY.json",
+      "description": "LLM-ready structured market summary for downstream AI or RAG workflows.",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/LLM_MARKET_SUMMARY.json"
+    },
+    "market_report_pdf": {
+      "type": "string",
+      "title": "MARKET_REPORT.pdf",
+      "description": "PDF market report with summary insights, opportunity signals, and market structure highlights.",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/MARKET_REPORT.pdf"
+    }
+  }
+}
