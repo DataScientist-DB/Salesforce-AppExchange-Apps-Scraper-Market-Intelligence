@@ -4,7 +4,7 @@ Scrape Salesforce AppExchange apps, reviews, ratings, pricing models, and ecosys
 
 This project powers the Apify Store Actor:
 
-https://apify.com/adinfosys-labs/salesforce-appexchange-apps-scraper-market-intelligence
+https://apify.com/adinfosys-labs/salesforce-appexchange-discovery-engine---apps-reviews
 
 Extract Salesforce AppExchange apps, categories, ratings, and ecosystem insights.
 Discover, Analyze, and Export Salesforce AppExchange Apps
