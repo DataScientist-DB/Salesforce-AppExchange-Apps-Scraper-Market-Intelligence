@@ -1,9 +1,10 @@
-🚀 Salesforce AppExchange Apps Scraper & Market Intelligence
+# 🚀 Salesforce AppExchange Apps Scraper & Market Intelligence
 Scrape Salesforce AppExchange apps, reviews, ratings, pricing models, and ecosystem insights for market research and competitive intelligence.
 ## Apify Store Actor
 
-Run this Actor directly on Apify store:
+Run this Actor directly on the Apify store:
 https://apify.com/adinfosys-labs/salesforce-appexchange-discovery-engine---apps-reviews
+
 Extract Salesforce AppExchange apps, categories, ratings, and ecosystem insights.
 Discover, analyze, and export Salesforce AppExchange ecosystem data.
 The Salesforce AppExchange Intelligence Engine automatically discovers Salesforce AppExchange applications and extracts structured metadata for market research, competitive intelligence, and ecosystem analysis.
