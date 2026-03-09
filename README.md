@@ -1,15 +1,12 @@
-
-# 🚀 Salesforce AppExchange Apps Scraper & Market Intelligence
+🚀 Salesforce AppExchange Apps Scraper & Market Intelligence
 Scrape Salesforce AppExchange apps, reviews, ratings, pricing models, and ecosystem insights for market research and competitive intelligence.
+## Apify Store Actor
 
-This project powers the Apify Store Actor:
-
+Run this Actor directly on Apify store:
 https://apify.com/adinfosys-labs/salesforce-appexchange-discovery-engine---apps-reviews
-
 Extract Salesforce AppExchange apps, categories, ratings, and ecosystem insights.
-Discover, Analyze, and Export Salesforce AppExchange Apps
-
-The Salesforce AppExchange Intelligence Engine is an advanced Apify Actor that automatically discovers Salesforce AppExchange applications and extracts structured metadata for market research, competitive intelligence, and ecosystem analysis.
+Discover, analyze, and export Salesforce AppExchange ecosystem data.
+The Salesforce AppExchange Intelligence Engine automatically discovers Salesforce AppExchange applications and extracts structured metadata for market research, competitive intelligence, and ecosystem analysis.
 The Actor explores AppExchange across three discovery groups:
 • Business Needs
 • Industries
@@ -17,7 +14,6 @@ The Actor explores AppExchange across three discovery groups:
 It collects app metadata and generates analysis-ready datasets and market intelligence reports.
  
 👥 Who This Actor Is For
-This Actor is useful for:
 • Salesforce consulting firms
 • SaaS product managers
 • Competitive intelligence teams
@@ -50,7 +46,6 @@ For each Salesforce AppExchange app the Actor collects:
 • Market classification signals
  
 📦 Output Files
-After each run the Actor produces:
 File	Description
 APPS.csv	Spreadsheet export
 APPS.xlsx	Excel export
@@ -58,7 +53,7 @@ MARKET_INTELLIGENCE.json	Machine-readable analysis
 EXECUTIVE_SUMMARY.txt	Human-readable insights
 LLM_MARKET_SUMMARY.json	AI-ready summary
 MARKET_REPORT.pdf	Executive PDF report
-These outputs are commonly used for:
+Used for:
 • competitive analysis
 • market research
 • Salesforce ecosystem mapping
@@ -67,7 +62,6 @@ These outputs are commonly used for:
 • product strategy
  
 📄 Example Output Record
-Example dataset item produced by the Actor:
 {
   "listing_id": "a0N30000003IUgVEAW",
   "app_name": "Cirrus Insight",
@@ -83,28 +77,32 @@ Example dataset item produced by the Actor:
   "last_seen_at": "2026-03-05T12:10:00Z"
 }
  
+📊 Example Output Table
+App Name	Category	Rating	Reviews	Pricing
+Cirrus Insight	Sales Productivity	4.8	1200	Paid
+FormAssembly	Data Collection	4.7	900	Subscription
+TaskRay	Project Management	4.6	750	Paid
+ 
 📊 Example Output & Interface
 Dataset Output (Apify Dataset)
-The Actor produces a structured dataset of discovered Salesforce AppExchange apps.
  
+The dataset contains structured records for each discovered Salesforce AppExchange app.
  
 CSV / Excel Export
-All results can be exported as CSV or Excel files.
  
 Example exported files:
 APPS.csv
 APPS.xlsx
+These are ready for spreadsheets, BI dashboards, and analysis.
  
 Market Intelligence Report
-The Actor can generate an executive market intelligence report summarizing the ecosystem.
  
-Generated files:
+Generated report files:
 MARKET_INTELLIGENCE.json
 EXECUTIVE_SUMMARY.txt
 MARKET_REPORT.pdf
  
 Actor Input Configuration
-The Actor can be configured directly in the Apify Console.
  
 Example configuration:
 {
@@ -118,7 +116,7 @@ Example configuration:
 }
  
 ⚡ Quick Start
-Example input configuration:
+Run the Actor with a simple configuration:
 {
   "mode": "apps",
   "categoryGroup": "business-needs",
@@ -132,7 +130,6 @@ Example input configuration:
 }
  
 🧭 Discovery Modes
-The Actor supports three AppExchange discovery groups.
 1️⃣ Business Needs
 https://appexchange.salesforce.com/explore/business-needs
 Example categories:
@@ -141,12 +138,9 @@ marketing
 finance
 analytics
 customer-service
-it-and-admin
 productivity
 commerce
 human-resources
-erp
-integration
  
 2️⃣ Industries
 https://appexchange.salesforce.com/explore/industries
@@ -155,7 +149,6 @@ automotive
 manufacturing
 healthcare
 financial-services
-public-sector
 retail
 education
 energy
@@ -184,20 +177,19 @@ headless	Browser mode
 proxySettings	Apify proxy configuration
  
 📈 Market Intelligence Insights
-The Actor automatically generates analytics including:
+The Actor generates analytics including:
 • market overview
 • category distribution
 • pricing distribution
 • competitive landscape
 • opportunity signals
 • ecosystem trends
-These insights are exported to:
+Exported to:
 • MARKET_INTELLIGENCE.json
 • EXECUTIVE_SUMMARY.txt
 • MARKET_REPORT.pdf
  
 ▶️ Running Locally
-Run locally:
 apify run
 Push updates:
 apify push
@@ -210,29 +202,18 @@ apify push
 • consulting ecosystem reports
  
 🔐 Compliance
-This Actor:
 ✔ collects publicly available information
 ✔ does not require login
 ✔ does not access private data
 Users must ensure compliance with Salesforce terms and local regulations.
  
 ⭐ Why This Actor Is Unique
-Compared with typical scrapers, this engine:
 ✔ supports three AppExchange exploration modes
 ✔ generates market intelligence reports automatically
 ✔ produces analysis-ready datasets
 ✔ handles dynamic page loading and filters
  
-📌 Roadmap
-Future improvements may include:
-• review extraction improvements
-• vendor aggregation analytics
-• ecosystem trend monitoring
-• AI-generated insights
-• category performance scoring
- 
 💰 Example Run Cost
-Typical run costs using pay-per-result pricing:
 Apps Crawled	Estimated Cost
 200	~$0.02
 1,000	~$0.10
